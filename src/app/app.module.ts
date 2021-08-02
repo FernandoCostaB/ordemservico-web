@@ -14,6 +14,7 @@ import { MatCardModule } from "@angular/material/card";
 import { OrderserviceCrudComponent } from "./views/orderservice-crud/orderservice-crud.component";
 import { OrderServiceCreateComponent } from "./components/order-service/order-service-create/order-service-create.component";
 import { MatButtonModule } from "@angular/material/button";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MatButtonModule } from "@angular/material/button";
     MatListModule,
     MatCardModule,
     MatButtonModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
