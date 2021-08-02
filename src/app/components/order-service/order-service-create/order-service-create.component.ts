@@ -1,3 +1,5 @@
+import { OrderServiceExam } from './../../../models/orderserviceexam.model';
+import { OrderService } from './../../../models/orderservice.model';
 import { Doctor } from './../../../models/doctor.model';
 import { CollectionPost } from './../../../models/collectionpost.model';
 import { Patient } from "./../../../models/patient.model";
@@ -12,6 +14,10 @@ import { Exam } from 'src/app/models/exam.model';
   styleUrls: ["./order-service-create.component.css"],
 })
 export class OrderServiceCreateComponent implements OnInit {
+
+  orderService: Partial<OrderService> = {};
+  orderServiceExam = <OrderServiceExam>{};
+
   constructor(
     private orderServiceService: OrderServiceService,
     private router: Router
@@ -23,18 +29,30 @@ export class OrderServiceCreateComponent implements OnInit {
   }
 
   saveOrderService(): void {
-    this.orderServiceService.showMessage("Salvou");
+    this.orderService.ordemServicoExame = this.orderServiceExam;
+    console.log(this.orderService);
+    // this.orderServiceService.showMessage("Salvou");
   }
   pacienteRecebido($event: Patient): void {
+    this.orderService.paciente = $event;
     console.log($event);
   }
   postoRecebido($event: CollectionPost): void {
+    this.orderService.postoColeta = $event;
     console.log($event);
   }
   medicoRecebido($event: Doctor): void {
+    this.orderService.medico = $event;
     console.log($event);
   }
   examesSelecionados($event: Exam[]): void {
-    console.log($event);
+    var precoTotal = 0;
+    for (var i = 0; i < $event.length; i++){
+      precoTotal = precoTotal + $event[i].preco;
+    }
+    this.orderServiceExam.preco = precoTotal;
+    this.orderServiceExam.exames = $event;
   }
+
+
 }

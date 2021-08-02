@@ -1,6 +1,14 @@
 <mat-card class="">
   <mat-card-title class="">Nova Ordem de Servico</mat-card-title>
   <form>
+     <mat-form-field>
+      <input
+        matInput
+        placeholder="Convênio"
+        [(ngModel)]="orderService.convenio"
+        name="convenio"
+      />
+    </mat-form-field>
     <app-patient-read (patient)="pacienteRecebido($event)"></app-patient-read>
     <app-collection-post-read (collectionPost)="postoRecebido($event)"></app-collection-post-read>
     <app-doctor-read  (doctor)="medicoRecebido($event)"  ></app-doctor-read>

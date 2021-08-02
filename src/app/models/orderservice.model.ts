@@ -4,10 +4,10 @@ import { Patient } from "./patient.model";
 import { CollectionPost } from "./collectionpost.model";
 export interface OrderService {
   id?: number;
-  data: Date;
+  data: String;
   convenio: String;
   paciente: Patient;
   postoColeta: CollectionPost;
   medico: Doctor;
-  ordemServicoExame: OrderServiceExam;
+  ordemServicoExame?: OrderServiceExam;
 }
