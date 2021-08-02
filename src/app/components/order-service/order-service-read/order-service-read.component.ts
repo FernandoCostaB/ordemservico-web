@@ -37,28 +37,8 @@ export class OrderServiceReadComponent implements OnInit {
   ) {
     this.orderServiceService.read().subscribe((orderServices) => {
       this.orderServices = orderServices;
+      console.log(this.orderServices);
     });
-    // this.orderServiceExamService.read().subscribe((orderServices) => {
-    //   this.orderServicesExams = orderServices;
-    //   console.log(orderServices);
-    // });
-    // this.patientService.read().subscribe((orderServices) => {
-    //   this.patients = orderServices;
-    //   console.log(orderServices);
-    // });
-    // this.examService.read().subscribe((orderServices) => {
-    //   this.exams = orderServices;
-    //   console.log(orderServices);
-    // });
-    // this.collectionPostService.read().subscribe((orderServices) => {
-    //   this.collectionsPosts = orderServices;
-    //   console.log(orderServices);
-    // });
-
-    // this.doctorService.read().subscribe((orderServices) => {
-    //   this.doctors = orderServices;
-    //   console.log(orderServices);
-    // });
   }
 
   ngOnInit(): void {}

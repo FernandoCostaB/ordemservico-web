@@ -15,7 +15,7 @@ import { Exam } from 'src/app/models/exam.model';
 })
 export class OrderServiceCreateComponent implements OnInit {
 
-  orderService: Partial<OrderService> = {};
+  orderService = <OrderService>{};
   orderServiceExam = <OrderServiceExam>{};
 
   constructor(
@@ -31,19 +31,19 @@ export class OrderServiceCreateComponent implements OnInit {
   saveOrderService(): void {
     this.orderService.ordemServicoExame = this.orderServiceExam;
     console.log(this.orderService);
-    // this.orderServiceService.showMessage("Salvou");
+    this.orderServiceService.create(this.orderService).subscribe(() => {
+      this.orderServiceService.showMessage("Produto criado");
+      this.router.navigate(["/order-service"]);
+    });
   }
   pacienteRecebido($event: Patient): void {
     this.orderService.paciente = $event;
-    console.log($event);
   }
   postoRecebido($event: CollectionPost): void {
     this.orderService.postoColeta = $event;
-    console.log($event);
   }
   medicoRecebido($event: Doctor): void {
     this.orderService.medico = $event;
-    console.log($event);
   }
   examesSelecionados($event: Exam[]): void {
     var precoTotal = 0;
