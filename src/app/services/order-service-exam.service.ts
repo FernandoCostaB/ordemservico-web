@@ -1,15 +1,14 @@
+import { OrderServiceExam } from "./../models/orderserviceexam.model";
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable, EMPTY } from "rxjs";
 import { catchError, map } from "rxjs/operators";
-import { OrderService } from "./../models/orderservice.model";
 import { SnackBarService } from "./../shared/snackbarservice.service";
-
 @Injectable({
   providedIn: "root",
 })
-export class OrderServiceService {
-  baseUrl = "http://localhost:8080/ordem-servicos";
+export class OrderServiceExamService {
+  baseUrl = "http://localhost:8080/ordem-servicos-exames";
 
   constructor(
     private snackBarService: SnackBarService,
@@ -20,15 +19,8 @@ export class OrderServiceService {
     this.snackBarService.showMessage(msg);
   }
 
-  create(orderService: OrderService): Observable<any> {
-    return this.http.post<any>(this.baseUrl, orderService).pipe(
-      map((obj) => obj),
-      catchError((e) => this.errorHandler(e))
-    );
-  }
-
-  read(): Observable<OrderService[]> {
-    return this.http.get<OrderService[]>(this.baseUrl).pipe(
+  read(): Observable<OrderServiceExam[]> {
+    return this.http.get<OrderServiceExam[]>(this.baseUrl).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );

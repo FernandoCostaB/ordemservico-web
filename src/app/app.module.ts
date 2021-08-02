@@ -15,6 +15,12 @@ import { OrderserviceCrudComponent } from "./views/orderservice-crud/orderservic
 import { OrderServiceCreateComponent } from "./components/order-service/order-service-create/order-service-create.component";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { FormsModule } from "@angular/forms";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
+
+import { HttpClientModule } from "@angular/common/http";
+import { OrderServiceReadComponent } from './components/order-service/order-service-read/order-service-read.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +30,7 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
     HomeComponent,
     OrderserviceCrudComponent,
     OrderServiceCreateComponent,
+    OrderServiceReadComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +42,10 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
     MatCardModule,
     MatButtonModule,
     MatSnackBarModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
