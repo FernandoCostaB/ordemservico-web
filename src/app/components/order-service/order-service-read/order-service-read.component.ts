@@ -1,4 +1,4 @@
-import { Patient } from "./../../../models/patiente.model";
+import { Patient } from "./../../../models/patient.model";
 import { Exam } from "./../../../models/exam.model";
 import { Doctor } from "./../../../models/doctor.model";
 import { CollectionPost } from "./../../../models/collectionpost.model";

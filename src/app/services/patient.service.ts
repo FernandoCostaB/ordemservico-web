@@ -1,4 +1,4 @@
-import { Patient } from "./../models/patiente.model";
+import { Patient } from "./../models/patient.model";
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable, EMPTY } from "rxjs";

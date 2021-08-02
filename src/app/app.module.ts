@@ -21,9 +21,12 @@ import { MatInputModule } from "@angular/material/input";
 import { MatTableModule } from "@angular/material/table";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatSortModule } from "@angular/material/sort";
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import { MatRadioModule } from "@angular/material/radio";
 
 import { HttpClientModule } from "@angular/common/http";
 import { OrderServiceReadComponent } from "./components/order-service/order-service-read/order-service-read.component";
+import { PatientReadComponent } from "./components/patient/patient-read/patient-read.component";
 
 @NgModule({
   declarations: [
@@ -34,6 +37,7 @@ import { OrderServiceReadComponent } from "./components/order-service/order-serv
     OrderserviceCrudComponent,
     OrderServiceCreateComponent,
     OrderServiceReadComponent,
+    PatientReadComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +56,8 @@ import { OrderServiceReadComponent } from "./components/order-service/order-serv
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatCheckboxModule,
+    MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

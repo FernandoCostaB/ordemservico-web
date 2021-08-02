@@ -1,3 +1,4 @@
+import { Patient } from "./../../../models/patient.model";
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { OrderServiceService } from "src/app/services/order-service.service";
@@ -20,5 +21,8 @@ export class OrderServiceCreateComponent implements OnInit {
 
   saveOrderService(): void {
     this.orderServiceService.showMessage("Salvou");
+  }
+  pacienteRecebido($event: Patient): void {
+    console.log($event);
   }
 }

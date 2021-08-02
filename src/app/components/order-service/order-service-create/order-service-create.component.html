@@ -1,12 +1,14 @@
 <mat-card class="">
   <mat-card-title class="">Nova Ordem de Servico</mat-card-title>
   <form>
-    <mat-form-field>
+    <!-- <mat-form-field>
       <input matInput placeholder="Nome" name="name" />
     </mat-form-field>
     <mat-form-field>
       <input matInput placeholder="Preço (R$)" name="price" />
-    </mat-form-field>
+    </mat-form-field> -->
+
+    <app-patient-read (patient)="pacienteRecebido($event)"></app-patient-read>
   </form>
 
   <button mat-raised-button (click)="saveOrderService()" color="primary">
