@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { OrderServiceService } from "src/app/services/order-service.service";
 
 @Component({
@@ -7,9 +8,16 @@ import { OrderServiceService } from "src/app/services/order-service.service";
   styleUrls: ["./order-service-create.component.css"],
 })
 export class OrderServiceCreateComponent implements OnInit {
-  constructor(private orderServiceService: OrderServiceService) {}
+  constructor(
+    private orderServiceService: OrderServiceService,
+    private router: Router
+  ) {}
 
-  ngOnInit(): void {
-    this.orderServiceService.showMessage("Funcionando");
+  ngOnInit(): void {}
+  navigateToListOrders(): void {
+    this.router.navigate(["/order-service"]);
+  }
+  saveOrderService(): void {
+    this.orderServiceService.showMessage("Salvou");
   }
 }
