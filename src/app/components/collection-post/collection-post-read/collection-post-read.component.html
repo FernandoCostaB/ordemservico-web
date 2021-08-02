@@ -1,0 +1,18 @@
+<label id="example-radio-group-label">Selecione um posto de Coleta</label>
+<mat-list role="list">
+  <mat-list-item *ngFor="let collectionsPost of collectionsPosts" role="listitem">
+    <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+      [(ngModel)]="collectionPostSelected"
+      (click)="selectColletionPost(collectionsPost)"
+    >
+      <mat-radio-button
+        class="example-radio-button"
+        [value]="collectionsPost"
+      >
+        {{ collectionsPost.descricao }}
+      </mat-radio-button>
+    </mat-radio-group>
+  </mat-list-item>
+</mat-list>

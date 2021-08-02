@@ -1,0 +1,6 @@
+<label id="example-radio-group-label">Selecione os Exames que deseja</label>
+<mat-list role="list">
+  <mat-list-item *ngFor="let exam of exams" role="listitem">
+  <mat-checkbox class="example-margin"  (click)="selectExam(exam)">{{exam.descricao}}</mat-checkbox>
+  </mat-list-item>
+</mat-list>

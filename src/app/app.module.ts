@@ -24,9 +24,13 @@ import { MatSortModule } from "@angular/material/sort";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatRadioModule } from "@angular/material/radio";
 
+
 import { HttpClientModule } from "@angular/common/http";
 import { OrderServiceReadComponent } from "./components/order-service/order-service-read/order-service-read.component";
 import { PatientReadComponent } from "./components/patient/patient-read/patient-read.component";
+import { CollectionPostReadComponent } from './components/collection-post/collection-post-read/collection-post-read.component';
+import { DoctorReadComponent } from './components/doctor/doctor-read/doctor-read.component';
+import { ExamReadComponent } from './components/exam/exam-read/exam-read.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +42,9 @@ import { PatientReadComponent } from "./components/patient/patient-read/patient-
     OrderServiceCreateComponent,
     OrderServiceReadComponent,
     PatientReadComponent,
+    CollectionPostReadComponent,
+    DoctorReadComponent,
+    ExamReadComponent,
   ],
   imports: [
     BrowserModule,

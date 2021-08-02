@@ -1,0 +1,18 @@
+<label id="example-radio-group-label">Selecione um médico</label>
+<mat-list role="list">
+  <mat-list-item *ngFor="let doctor of doctors" role="listitem">
+    <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+      [(ngModel)]="doctorSelected"
+      (click)="selectDoctor(doctor)"
+    >
+      <mat-radio-button
+        class="example-radio-button"
+        [value]="doctor"
+      >
+        {{ doctor.nome }}
+      </mat-radio-button>
+    </mat-radio-group>
+  </mat-list-item>
+</mat-list>
