@@ -18,9 +18,12 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { FormsModule } from "@angular/forms";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
+import { MatTableModule } from "@angular/material/table";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatSortModule } from "@angular/material/sort";
 
 import { HttpClientModule } from "@angular/common/http";
-import { OrderServiceReadComponent } from './components/order-service/order-service-read/order-service-read.component';
+import { OrderServiceReadComponent } from "./components/order-service/order-service-read/order-service-read.component";
 
 @NgModule({
   declarations: [
@@ -46,6 +49,9 @@ import { OrderServiceReadComponent } from './components/order-service/order-serv
     MatFormFieldModule,
     MatInputModule,
     HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -25,6 +25,8 @@ export class OrderServiceReadComponent implements OnInit {
   orderServicesExams: OrderServiceExam[] = [];
   patients: Patient[] = [];
 
+  displayedColumns = ["id", "paciente", "price"];
+
   constructor(
     private orderServiceService: OrderServiceService,
     private collectionPostService: CollectionPostService,
@@ -35,7 +37,6 @@ export class OrderServiceReadComponent implements OnInit {
   ) {
     this.orderServiceService.read().subscribe((orderServices) => {
       this.orderServices = orderServices;
-      console.log(orderServices);
     });
     // this.orderServiceExamService.read().subscribe((orderServices) => {
     //   this.orderServicesExams = orderServices;
